@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Jeu</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="jeu.css">
+</head>
+<body>
+	<div class = "accueil">
+	
+		<div class = "titre">
+			Bienvenue Anthéa !
+		</div>
+		
+		<div class = "texte">
+			Tu as <span>19</span> heures pour résoudre ces <span>3</span> jeux.
+		</div>
+		
+		<a href = "Question.html" class = 'button'><span></span>Commencer</a>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(e){	
+			$('.button').on('mouseenter', function(e){
+				x = e.pageX - $(this).offset().left;
+				y = e.pageY - $(this).offset().top;
+				$(this).find('span').css({top:y, left:x})
+			})
+			$('.button').on('mouseout', function(e){
+				x = e.pageX - $(this).offset().left;
+				y = e.pageY - $(this).offset().top;
+				$(this).find('span').css({top:y, left:x})
+			})
+		})
+	</script>
+		
+</body>
+</html>
