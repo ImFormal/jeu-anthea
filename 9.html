@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Jeu</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="jeu.css">
+</head>
+<body>
+	<div class = "page1">
+	
+		<div class = "jeufait">
+			<a href = "#"><img src = "Anthea/img/4i1mcheck.png" width = "400px" height = "auto"></img></a>
+			<br>
+			<p>Anthéa</p>
+		</div>
+		
+		<div class = "jeufait">
+			<a href = "#"><img src = "Ales/img/alescheck.png" width = "400px" height = "auto"></img></a>
+			<br>
+			<p>Alès</p>
+		</div>
+			
+		<div class = "jeufait">
+			<a href = "#"><img src = "BTS/img/btscheck.png" width = "400px" height = "auto"></img></a>
+			<br>
+			<p>BTS</p>
+
+		</div>
+		
+	</div>
+	
+	<div class = "confirm">
+		<a href = "10.html" class = 'button'><span></span>Confirmer</a>
+	</div>
+	
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(e){	
+			$('.button').on('mouseenter', function(e){
+				x = e.pageX - $(this).offset().left;
+				y = e.pageY - $(this).offset().top;
+				$(this).find('span').css({top:y, left:x})
+			})
+			$('.button').on('mouseout', function(e){
+				x = e.pageX - $(this).offset().left;
+				y = e.pageY - $(this).offset().top;
+				$(this).find('span').css({top:y, left:x})
+			})
+		})
+	</script>
+		
+</body>
+</html>

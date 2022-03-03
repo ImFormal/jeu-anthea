@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Jeu</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../../jeu.css">
+</head>
+<body>
+	<div class = "accueil">
+	
+		<h3>Qui est cet agent ?</h3>
+
+		
+		<div class = "agent">
+			<img src = "../img/killjoy.jpg" width = "400px" height = "auto"></img>
+		</div>
+		
+		
+		<input type="text" size="26" onkeyup="agent()" id="Reponse" autocomplete="off" required>
+		
+		
+		<script>
+		function agent(){
+			var reponse = document.getElementById("Reponse").value;
+			if (reponse=="Killjoy" || reponse=="killjoy" || reponse=="KILLJOY") {
+				document.getElementById("suivant").style.display = "block";
+			}
+		}
+		</script>
+		
+		<div class = "agentrep">
+			<a href = "valorantneon.html" class = 'button' id="suivant" style="display:none"><span></span>Suivant</a>
+		</div>
+	</div>
+			
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(e){	
+			$('.button').on('mouseenter', function(e){
+				x = e.pageX - $(this).offset().left;
+				y = e.pageY - $(this).offset().top;
+				$(this).find('span').css({top:y, left:x})
+			})
+			$('.button').on('mouseout', function(e){
+				x = e.pageX - $(this).offset().left;
+				y = e.pageY - $(this).offset().top;
+				$(this).find('span').css({top:y, left:x})
+			})
+		})
+	</script>
+	
+</body>
+</html>

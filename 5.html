@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Jeu</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="jeu.css">
+</head>
+<body>
+	<div class = "accueil">
+	
+		<div class = "titre">
+			<img src = "ydryd.png" width = "400px" height = "auto"></img>
+		</div>
+		
+		<div class = "titre">
+			Eh non ! T'as vraiment cru que c'était ça ?
+		</div>
+		
+		<br>
+		<div class = "texte">
+			C'est beaucoup trop facile pour toi !
+		</div>
+		
+		<br>
+		<div class = "texte">
+			Allez cette fois-ci c'est la bonne !
+		</div>
+		
+		<a href = "6.html" class = 'button'><span></span>Commencer</a>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(e){	
+			$('.button').on('mouseenter', function(e){
+				x = e.pageX - $(this).offset().left;
+				y = e.pageY - $(this).offset().top;
+				$(this).find('span').css({top:y, left:x})
+			})
+			$('.button').on('mouseout', function(e){
+				x = e.pageX - $(this).offset().left;
+				y = e.pageY - $(this).offset().top;
+				$(this).find('span').css({top:y, left:x})
+			})
+		})
+	</script>
+		
+</body>
+</html>
